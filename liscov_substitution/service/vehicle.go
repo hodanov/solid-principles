@@ -8,9 +8,9 @@ type Vehicle struct {
 }
 
 func (v *Vehicle) Ride() string {
-	return fmt.Sprintf("%sに乗って", v.Name)
+	return fmt.Sprintf("Ride in %s", v.Name)
 }
 
 func (v *Vehicle) Transport(dist string) string {
-	return fmt.Sprintf("時速%d[km/s]で%sへ移動する", v.Speed, dist)
+	return fmt.Sprintf("move to %s at %d[km/s]", dist, v.Speed)
 }

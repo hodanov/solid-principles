@@ -7,10 +7,16 @@ type SpaceX struct {
         Speed float64
 }
 
-func (b *SpaceX) Ride() string{
-	return fmt.Sprintf("%sに乗って", b.Name)
+func (s *SpaceX) Ride() string{
+	return fmt.Sprintf("Ride in %s.", s.Name)
 }
 
 func (s *SpaceX) Transport(dist string) string {
-	return fmt.Sprintf("秒速%.2f[km/s]で%sへ移動する", s.Speed, dist)
+        var text string
+        if dist == "space" {
+                text = fmt.Sprintf("Go into the space at %.2f[km/s].", s.Speed)
+        } else {
+                text = "This rocket can only go into the space."
+        }
+	return text
 }
