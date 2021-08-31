@@ -5,13 +5,12 @@ import "fmt"
 type Bicycle struct {
         Name string
         Speed float64
-        //Vehicle
 }
 
 func (b *Bicycle) Ride() string{
-	return fmt.Sprintf("%sに乗って", b.Name)
+	return fmt.Sprintf("Ride in %s.", b.Name)
 }
 
 func (b *Bicycle) Transport(dist string) string {
-	return fmt.Sprintf("時速%.2f[km/h]で%sへ移動する", b.Speed, dist)
+	return fmt.Sprintf("Go to %s at %.2f[km/s]", dist, b.Speed)
 }
