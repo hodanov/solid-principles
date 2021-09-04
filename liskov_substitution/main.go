@@ -9,7 +9,7 @@ import (
 var (
 	car     = service.CarImpl
 	bicycle = service.BicycleImpl
-	spaceX  = service.SpaceXImpl
+	rocket  = service.RocketImpl
 )
 
 func main() {
@@ -21,12 +21,12 @@ func main() {
 		Name:  "Jamis Ventura Comp",
 		Speed: 10,
 	}
-	spaceX = &service.SpaceX{
-		Name:  "Falcon 9",
+	rocket = &service.Rocket{
+		Name:  "SpaceX Falcon 9",
 		Speed: 7.9,
 	}
 
 	fmt.Println(car.Ride() + " " + car.Transport("Tokyo"))
 	fmt.Println(bicycle.Ride() + " " + bicycle.Transport("nearby park"))
-	fmt.Println(spaceX.Ride() + " " + spaceX.Transport("space"))
+	fmt.Println(rocket.Ride() + " " + rocket.Transport("space"))
 }
