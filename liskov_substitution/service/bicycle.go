@@ -12,5 +12,5 @@ func (b *Bicycle) Ride() string{
 }
 
 func (b *Bicycle) Transport(dist string) string {
-	return fmt.Sprintf("Go to %s at %.2f[km/s]", dist, b.Speed)
+	return fmt.Sprintf("Go to %s at %.2f[km/h]", dist, b.Speed)
 }
