@@ -7,4 +7,4 @@ type VehicleInterface interface {
 
 var CarImpl VehicleInterface = &Car{}
 var BicycleImpl VehicleInterface = &Bicycle{}
-var SpaceXImpl VehicleInterface = &SpaceX{}
+var RocketImpl VehicleInterface = &Rocket{}
