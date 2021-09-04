@@ -6,16 +6,22 @@ import (
 	"main.go/service"
 )
 
+var (
+	car     = service.CarImpl
+	bicycle = service.BicycleImpl
+	spaceX  = service.SpaceXImpl
+)
+
 func main() {
-	var car service.VehicleInterface = &service.Car{
+	car = &service.Car{
 		Name:  "TOYOTA Land Cruiser",
 		Speed: 60,
 	}
-	var bicycle service.VehicleInterface = &service.Bicycle{
+	bicycle = &service.Bicycle{
 		Name:  "Jamis Ventura Comp",
 		Speed: 10,
 	}
-	var spaceX service.VehicleInterface = &service.SpaceX{
+	spaceX = &service.SpaceX{
 		Name:  "Falcon 9",
 		Speed: 7.9,
 	}
