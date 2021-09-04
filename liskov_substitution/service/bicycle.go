@@ -7,6 +7,8 @@ type Bicycle struct {
         Speed float64
 }
 
+var BicycleImpl VehicleInterface = &Bicycle{}
+
 func (b *Bicycle) Ride() string{
 	return fmt.Sprintf("Ride in %s.", b.Name)
 }

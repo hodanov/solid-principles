@@ -7,6 +7,8 @@ type Rocket struct {
         Speed float64
 }
 
+var RocketImpl VehicleInterface = &Rocket{}
+
 func (s *Rocket) Ride() string{
 	return fmt.Sprintf("Ride in %s.", s.Name)
 }
