@@ -1,0 +1,50 @@
+@startuml
+
+package "service" {
+	class "Bicycle" as service.Bicycle <<V,Orchid>> {
+		+Name: string
+		+Speed: float64
+		+Ride(): string
+		+Transport(dist: string): string
+	}
+}
+
+
+
+package "service" {
+	class "Car" as service.Car <<V,Orchid>> {
+		+Name: string
+		+Speed: float64
+		+Ride(): string
+		+Transport(dist: string): string
+	}
+}
+
+
+
+package "service" {
+	class "Rocket" as service.Rocket <<V,Orchid>> {
+		+Name: string
+		+Speed: float64
+		+Ride(): string
+		+Transport(dist: string): string
+	}
+}
+
+
+
+package "service" {
+	interface "VehicleInterface" as service.VehicleInterface {
+		+Ride(): string
+		+Transport(: string): string
+	}
+}
+
+
+
+	service.Bicycle -up-|> service.VehicleInterface
+	service.Car -up-|> service.VehicleInterface
+	service.Rocket -up-|> service.VehicleInterface
+
+
+@enduml

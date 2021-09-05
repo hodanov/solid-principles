@@ -1,0 +1,53 @@
+@startuml
+
+package "facade" {
+	class "InstrumentFacade" as facade.InstrumentFacade <<E,#FFCC00>> {
+		+Bass: instruments.Bass
+		+Drums: instruments.Drums
+		+Piano: instruments.Piano
+		+Saxophone: instruments.Saxophone
+		+PlayMusic()
+	}
+}
+
+	facade.InstrumentFacade --> instruments.Bass
+	facade.InstrumentFacade --> instruments.Drums
+	facade.InstrumentFacade --> instruments.Piano
+	facade.InstrumentFacade --> instruments.Saxophone
+
+
+package "instruments" {
+	class "Bass" as instruments.Bass <<V,Orchid>> {
+		+PlayBass(): string
+	}
+}
+
+
+
+package "instruments" {
+	class "Drums" as instruments.Drums <<V,Orchid>> {
+		+PlayRhythm(): string
+	}
+}
+
+
+
+package "instruments" {
+	class "Piano" as instruments.Piano <<V,Orchid>> {
+		+PlayChords(): string
+	}
+}
+
+
+
+package "instruments" {
+	class "Saxophone" as instruments.Saxophone <<V,Orchid>> {
+		+PlayMelody(): string
+	}
+}
+
+
+
+
+
+@enduml
